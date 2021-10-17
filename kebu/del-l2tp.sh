@@ -25,16 +25,6 @@ echo -e ""
 rm setup.sh
 exit 0
 fi
-clear
-export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
-NUMBER_OF_CLIENTS=$(grep -c -E "^### " "/var/lib/premium-script/data-user-l2tp")
-	if [[ ${NUMBER_OF_CLIENTS} == '0' ]]; then
-		echo ""
-		echo "Name : Delete L2TP Account" | lolcat
-		echo ""
-		echo "You have no existing clients!"
-		exit 1
-	fi
 
 	echo ""
 	echo " Name : Delete L2TP Account"

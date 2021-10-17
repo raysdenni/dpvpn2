@@ -123,7 +123,7 @@ echo -e "==============================="
 echo -e "Script By DP VPN" | lolcat
 echo -e ""
 echo -e ""
-figlet DP VPN | lolcat -d 5
+figlet GEO GABUT | lolcat -d 5
 
 #EDUSSHSSL
 wget -O /usr/local/bin/ws-stunnel https://raw.githubusercontent.com/dpvpn09/dpvpn2/main/edu/ws-stunnel
@@ -231,7 +231,7 @@ sed -i 's/AcceptEnv/#AcceptEnv/g' /etc/ssh/sshd_config
 # install
 apt-get --reinstall --fix-missing install -y bzip2 gzip coreutils wget screen rsyslog iftop htop net-tools zip unzip wget net-tools curl nano sed screen gnupg gnupg1 bc apt-transport-https build-essential dirmngr libxml-parser-perl neofetch git lsof
 echo "clear" >> .profile
-echo "figlet -f slant DP VPN | lolcat" >> .profile
+echo "figlet -f slant GEO GABUT | lolcat" >> .profile
 echo "sleep 1" >> .profile
 echo "clear" >> .profile
 echo "neofetch" >> .profile
@@ -312,7 +312,7 @@ socket = r:TCP_NODELAY=1
 
 [Sslws]
 accept = 443
-connect = 127.0.0.1:8880
+connect = 8880
 
 [dropbear]
 accept = 990
@@ -459,9 +459,6 @@ wget -O port-trgo "https://raw.githubusercontent.com/dpvpn09/dpvpn2/main/men/por
 wget -O del-trgo "https://raw.githubusercontent.com/dpvpn09/dpvpn2/main/men/del-trgo.sh"
 wget -O /usr/bin/pointing https://www.dropbox.com/s/80b8hsh556jp774/pointing.sh && chmod +x /usr/bin/pointing && cd /usr/bin && apt install -y dos2unix && dos2unix pointing
 wget -O /usr/bin/set-br https://raw.githubusercontent.com/dpvpn09/dpvpn2/main/kebu/set-br.sh && chmod +x /usr/bin/set-br && cd /usr/bin && apt install -y dos2unix && dos2unix set-br
-wget -O panel-domain "https://raw.githubusercontent.com/dpvpn09/dpvpn2/main/wes/panel-domain.sh"
-wget -O /usr/bin/panel-domain https://raw.githubusercontent.com/dpvpn09/dpvpn2/main/wes/panel-domain.sh && chmod +x /usr/bin/panel-domain && cd /usr/bin && apt install -y dos2unix && dos2unix panel-domain
-wget -O panel-domain "https://raw.githubusercontent.com/dpvpn09/dpvpn2/main/wes/panel-domain.sh"
 chmod +x menu
 chmod +x l2tp
 chmod +x ssh
@@ -515,7 +512,6 @@ chmod +x cek-trgo
 chmod +x renew-trgo
 chmod +x port-trgo
 chmod +x del-trgo
-chmod +x panel-domain
 
 echo "0 5 * * * root clear-log" >> /etc/crontab
 echo "0 0 * * * root xp" >> /etc/crontab

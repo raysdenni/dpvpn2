@@ -1,18 +1,30 @@
 #!/bin/bash
-red='\e[1;31m'
-green='\e[0;32m'
+RED='\e[1;31m'
+GREEN='\e[0;32m'
+BLUE='\e[0;34m'
 NC='\e[0m'
-MYIP=$(wget -qO- ifconfig.me/ip);
-echo "Checking VPS"
-IZIN=$( curl https://raw.githubusercontent.com/geogabut/private/main/kepo/ipvps | grep $MYIP )
+MYIP=$(wget -qO- icanhazip.com);
+echo -e  "${RED}Checking VPS${NC}"
+sleep 2
+IZIN=$( curl https://raw.githubusercontent.com/dpvpn09/ipvps/main/ipvps | grep $MYIP )
 if [ $MYIP = $IZIN ]; then
-echo -e "${green}Permission Accepted...${NC}"
+echo -e "${GREEN}Permission Accepted...${NC}"
+sleep 2 
 else
-echo -e "${red}Permission Denied!${NC}";
-echo "Only For Premium Users"
+clear
+echo -e ""
+echo -e "======================================="
+echo -e ""
+echo -e "${RED}Permission Denied...!!! ${NC}"
+echo -e "IP VPS ANDA BELUM TERDAFTAR"
+echo -e "Contact WA https//wa.me/+6281285970456"
+echo -e "For Registration IP VPS"
+echo -e ""
+echo -e "======================================="
+echo -e ""
+rm setup.sh
 exit 0
 fi
-clear
 tls="$(cat ~/log-install.txt | grep -w "Vless TLS" | cut -d: -f2|sed 's/ //g')"
 none="$(cat ~/log-install.txt | grep -w "Vless None TLS" | cut -d: -f2|sed 's/ //g')"
 echo -e "======================================" | lolcat

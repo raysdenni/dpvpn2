@@ -82,7 +82,7 @@ systemctl enable autosett
 history -c
 echo "1.1.1" > /home/ver
 clear
-figlet -f slant DP VPN | lolcat
+figlet -f slant THIRASTORE | lolcat
 echo " "
 echo " "
 echo "=================================-[ AUTOSCRIPT PREMIUM ]-===========================" | tee -a log-install.txt
@@ -92,8 +92,8 @@ echo "   - OpenSSH                 : 22" | tee -a log-install.txt
 echo "   - OpenVPN                 : TCP 1194, UDP 2200, SSL 442" | tee -a log-install.txt
 echo "   - Stunnel4                : 445" | tee -a log-install.txt
 echo "   - Dropbear                : 990" | tee -a log-install.txt
-echo "   - WebSocket Dropbear      : 2095" | tee -a log-install.txt
-echo "   - WebSocket OpenSSH       : 8880" | tee -a log-install.txt
+echo "   - WebSocket Dropbear      : 8880" | tee -a log-install.txt
+echo "   - WebSocket OpenSSH       : 2095" | tee -a log-install.txt
 echo "   - WebSocket OpenVPN       : 2082" | tee -a log-install.txt
 echo "   - WebSocket TLS           : 443" | tee -a log-install.txt
 echo "   - Squid Proxy             : 3128, 8080 (limit to IP Server)"  | tee -a log-install.txt
