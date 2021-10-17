@@ -82,7 +82,7 @@ systemctl enable autosett
 history -c
 echo "1.1.1" > /home/ver
 clear
-figlet -f slant THIRASTORE | lolcat
+figlet -f slant DP VPN | lolcat
 echo " "
 echo " "
 echo "=================================-[ AUTOSCRIPT PREMIUM ]-===========================" | tee -a log-install.txt
