@@ -123,7 +123,7 @@ echo -e "==============================="
 echo -e "Script By DP VPN" | lolcat
 echo -e ""
 echo -e ""
-figlet GEO GABUT | lolcat -d 5
+figlet DP VPN | lolcat -d 5
 
 #EDUSSHSSL
 wget -O /usr/local/bin/ws-stunnel https://raw.githubusercontent.com/dpvpn09/dpvpn2/main/edu/ws-stunnel
