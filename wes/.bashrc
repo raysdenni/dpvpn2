@@ -124,9 +124,8 @@ echo "" | lolcat
   echo "╔══════════════════════════════════════════════════════════╗" | lolcat
   echo "║           SELAMAT DATANG DI SCRIPT PREMIUM               ║" | lolcat
   echo "╠══════════════════════════════════════════════════════════╣" | lolcat
-  echo "║               WhatsApp     : 082339191527                ║" | lolcat
-  echo "║               Telegram     : @sampiiiiu                  ║" | lolcat
-  echo "║               Facebook     : Muhammad Amin               ║" | lolcat
+  echo "║               WhatsApp     : 081285970456               ║" | lolcat
+  echo "║               Telegram     : @Dpvpn                  ║" | lolcat
   echo "║                                                          ║" | lolcat
   echo "║           Copyright © 2021 |  All Rights Reserved        ║" | lolcat
   echo "║                                                          ║" | lolcat
