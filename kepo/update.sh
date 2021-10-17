@@ -51,7 +51,7 @@ wget -O bbr "https://raw.githubusercontent.com/dpvpn09/dpvpn2/main/men/bbr.sh"
 wget -O bannerku "https://raw.githubusercontent.com/dpvpn09/dpvpn2/main/men/bannerku"
 wget -O add-host "https://raw.githubusercontent.com/dpvpn09/dpvpn2/main/kebu/add-host.sh"
 wget -O about "https://raw.githubusercontent.com/dpvpn09/dpvpn2/main/kebu/about.sh"
-wget -O usernew "https://raw.githubusercontent.com/dpvpn09/dpvpn2/main/kebu/usernew2.sh"
+wget -O usernew "https://raw.githubusercontent.com/dpvpn09/dpvpn2/main/kebu/usernew.sh"
 wget -O trial "https://raw.githubusercontent.com/dpvpn09/dpvpn2/main/kebu/trial.sh"
 wget -O hapus "https://raw.githubusercontent.com/dpvpn09/dpvpn2/main/kebu/hapus.sh"
 wget -O member "https://raw.githubusercontent.com/dpvpn09/dpvpn2/main/kebu/member.sh"
@@ -155,7 +155,7 @@ chmod +x vleess
 chmod +x bbr
 chmod +x bannerku
 chmod +x add-host
-chmod +x usernew2
+chmod +x usernew
 chmod +x trial
 chmod +x hapus
 chmod +x member
