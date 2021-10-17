@@ -66,8 +66,6 @@ echo -e   " $mg ║\e[m$bd 20$bl]\e[m$bd Information Display System      $mg    
 echo -e   " $gl ║\e[m$bd 21$bl]\e[m$bd Info Script Auto Install       $mg                      ║"
 echo -e   " $gl ║\e[m$bd 22$bl]\e[m$bd Clear Log                   $bl                         ║"
 echo -e   " $mg ║\e[m$bd 23$bl]\e[m$bd Auto Reboot                     $gl                     ║"
-echo -e   " $bl ║\e[m$bd 28$bl]\e[m$bd Add ID Cloudflare                    $mg                      ║"
-echo -e   " $bl ║\e[m$bd 29$bl]\e[m$bd Cloudflare Add-Ons                 $mg                           ║ "
 echo -e   " $mg ║\e[m$bd 24$bl]\e[m$bd Pointing VPS                   $mg                      ║"
 echo -e   " $mg ║\e[m$bd 25$bl]\e[m$bd Service Status                  $mg                     ║"
 echo -e   " $mg ║\e[m$bd 26$bl]\e[m$bd Cek Bandwidth VPS              $mg                      ║"
@@ -152,35 +150,26 @@ clear-log
 auto-reboot
 ;;
 24)
-cff
-;;
-25)
-cfd
-;;
-26)
-cfh
-;;
-27)
 pointing
 ;;
-28)
+25)
 running
 ;;
-29)
+26)
 bw
 ;;
-30)
+31)
 bbr
 ;;
-31)
+32)
 update
 ;;
-32)
+33)
 systemctl restart shadowsocks-libev-server@tls && systemctl restart shadowsocks-libev-server@http
 ;;
-33)
-;;
 34)
+;;
+35)
 ;;
 x)
 exit
