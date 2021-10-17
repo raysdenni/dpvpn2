@@ -8,87 +8,78 @@ blu='\e[34m'
 op='\e[35m'
 or='\033[1;33m'
 bd='\e[1m'
-MYIP=$(wget -qO- ifconfig.co);
-echo "Checking VPS"
-IZIN=$( curl https://raw.githubusercontent.com/dpvpn09/ipvps/main/ipvps | grep $MYIP )
-if [ $MYIP = $IZIN ]; then
-echo -e "${green}Permission Accepted...${NC}"
-else
-echo -e "${red}Permission Denied!${NC}";
-echo "Only For Premium Users"
-echo "Contact : wa.me/6281285970456"
-exit 0
-fi
 clear 
 cat /usr/bin/bannerku | lolcat
+ISP=$(curl -s ipinfo.io/org | cut -d " " -f 2-10 )
+IPVPS=$(curl -s ipinfo.io/ip )
+DOMAIN=$(cat /etc/v2ray/domain)
 ISP=$(curl -s ipinfo.io/org | cut -d " " -f 2-10 )
 CITY=$(curl -s ipinfo.io/city )
 WKT=$(curl -s ipinfo.io/timezone )
 IPVPS=$(curl -s ipinfo.io/ip )
+jam=$(date +"%T")
+hari=$(date +"%A")
+tnggl=$(date +"%d-%B-%Y")
 	cname=$( awk -F: '/model name/ {name=$2} END {print name}' /proc/cpuinfo )
 	cores=$( awk -F: '/model name/ {core++} END {print core}' /proc/cpuinfo )
 	freq=$( awk -F: ' /cpu MHz/ {freq=$2} END {print freq}' /proc/cpuinfo )
 	tram=$( free -m | awk 'NR==2 {print $2}' )
-	tram2=$( free -m | awk 'FNR == 2 {print $4}' )
-	tmemo2=$( df -h | awk 'FNR == 4 {print $2}' )
-	tmemo=$( df -h | awk 'FNR == 4 {print $4}' )
 	swap=$( free -m | awk 'NR==4 {print $2}' )
 	up=$(uptime|awk '{ $1=$2=$(NF-6)=$(NF-5)=$(NF-4)=$(NF-3)=$(NF-2)=$(NF-1)=$NF=""; print }')
-	echo -e " $bl ║ \e[032;1mCPU Model      :\e[0m$bd $cname  "
-	echo -e " $bl ║ \e[032;1mNumber Of Cores        :\e[0m$bd $cores"
-	echo -e " $bl ║ \e[032;1mCPU Frequency          :\e[0m$bd $freq MHz"
-	echo -e " $bl ║ \e[032;1mTotal RAM              :\e[0m$bd $tram MB"
-	echo -e " $bl ║ \e[032;1mTotal RAM Available    :\e[0m$bd $tram2 MB"
-	echo -e " $bl ║ \e[032;1mTotal Memory           :\e[0m$bd $tmemo2"
-	echo -e " $bl ║ \e[032;1mTotal Memory Available :\e[0m$bd $tmemo"
-	echo -e " $op ║ \e[032;1mSystem Uptime          :\e[0m$bd $up H"
-	echo -e " $op ║ \e[032;1mISP Name               :\e[0m$bd $ISP"
-        echo -e " $op ║ \e[032;1mIP Vps                 :\e[0m$bd $IPVPS"
-	echo -e " $op ║ \e[032;1mCity                   :\e[0m$bd $CITY"
-	echo -e " $op ║ \e[032;1mTime                   :\e[0m$bd $WKT                    ╥"
-echo -e  "  ╠════════════════════════════════════════════════════════════╣" | lolcat
-echo -e  "  ║                       ┃MENU OPTIONS┃                       ║ \e[m" |lolcat
-echo -e  "  ╠════════════════════════════════════════════════════════════╣" | lolcat
-echo -e  " \e[32;1m ║\e[m$bd 1$bl]\e[m$bd SSH & OpenVPN Menu                                      ╨"
-echo -e  " $gl ║\e[m$bd 2$bl]\e[m$bd Panel Wireguard "
-echo -e  " $gl ║\e[m$bd 3$bl]\e[m$bd Panel L2TP & PPTP Account"
-echo -e  " $gl ║\e[m$bd 4$bl]\e[m$bd Panel SSTP  Account"
-echo -e  " $bl ║\e[m$bd 5$bl]\e[m$bd Panel SSR & SS Account"
-echo -e  " $bl ║\e[m$bd 6$bl]\e[m$bd Panel V2Ray"
-echo -e  " $bl ║\e[m$bd 7$bl]\e[m$bd Panel VLess"
-echo -e  " $bl ║\e[m$bd 8$bl]\e[m$bd Panel TRojanGO [CLOSED]"
-echo -e  " $bl ║\e[m$bd 9$bl]\e[m$bd Panel TrojanGFW                                         ╥"
-echo -e   "  \e[1;32m╠════════════════════════════════════════════════════════════╣\e[m" | lolcat
-echo -e   "  ║                       ┃SYSTEM MENU┃                        ║\e[m" | lolcat 
-echo -e   "  \e[1;32m╠════════════════════════════════════════════════════════════╣\e[m" | lolcat
-echo -e   " $mg ║\e[m$bd 10$bl]\e[m$bd Add Subdomain Host For VPS                             ╨"
-echo -e   " $mg ║\e[m$bd 11$bl]\e[m$bd Renew Certificate V2RAY"
-echo -e   " $mg ║\e[m$bd 12$bl]\e[m$bd Change Port All Account"
-echo -e   " $mg ║\e[m$bd 13$bl]\e[m$bd Autobackup Data VPS"
-echo -e   " $mg ║\e[m$bd 14$bl]\e[m$bd Backup Data VPS"
-echo -e   " $mg ║\e[m$bd 15$bl]\e[m$bd Restore Data VPS"
-echo -e   " $gl ║\e[m$bd 16$bl]\e[m$bd Webmin Menu"
-echo -e   " $gl ║\e[m$bd 17$bl]\e[m$bd Limit Bandwith Speed Server"
-echo -e   " $gl ║\e[m$bd 18$bl]\e[m$bd Check Usage of VPS Ram" 
-echo -e   " $gl ║\e[m$bd 19$bl]\e[m$bd Reboot VPS"
-echo -e   " $gl ║\e[m$bd 20$bl]\e[m$bd Speedtest VPS"
-echo -e   " $gl ║\e[m$bd 21$bl]\e[m$bd Information Display System" 
-echo -e   " $gl ║\e[m$bd 22$bl]\e[m$bd Info Script Auto Install"
-echo -e   " $gl ║\e[m$bd 23$bl]\e[m$bd Install BBR"
-echo -e   " $bl ║\e[m$bd 24$bl]\e[m$bd Set Auto Reboot"
-echo -e   " $bl ║\e[m$bd 25$bl]\e[m$bd Status Tunneling"
-echo -e   " $bl ║\e[m$bd 26$bl]\e[m$bd Clear Log"
-echo -e   " $bl ║\e[m$bd 27$bl]\e[m$bd Restart All Service"
-echo -e   " $bl ║\e[m$bd 28$bl]\e[m$bd Add ID Cloudflare"
-echo -e   " $bl ║\e[m$bd 29$bl]\e[m$bd Cloudflare Add-Ons" 
-echo -e   " $bl ║\e[m$bd 30$bl]\e[m$bd Pointing BUG"
-echo -e   " $bl ║\e[m$bd 31$bl]\e[m$bd Change Banner"
-echo -e   " $bl ║\e[m$bd 32$bl]\e[m$bd Update To Last Version                                 ╥"
-echo -e   "  \e[1;32m╠════════════════════════════════════════════════════════════╣\e[m" | lolcat
-echo -e   "  ║ x)   Exit                                                  ║\e[m" | lolcat
-echo -e   "  \e[1;32m╚════════════════════════════════════════════════════════════╝\e[m" | lolcat
+echo -e " $bl ║ \e[36;1m• ISP Name          :\e[0m$bd $ISP"
+echo -e " $bl ║ \e[36;1m• City              :\e[0m$bd $CITY"
+echo -e " $bl ║ \e[36;1m• CPU Model         :\e[0m$bd$cname"
+echo -e " $bl ║ \e[36;1m• Number Of Cores   :\e[0m$bd $cores"
+echo -e " $gl ║ \e[36;1m• CPU Frequency     :\e[0m$bd$freq MHz"
+echo -e " $gl ║ \e[36;1m• Total RAM         :\e[0m$bd $tram MB"
+echo -e " $gl ║ \e[36;1m• Waktu             :\e[0m$bd $jam"
+echo -e " $mg ║ \e[36;1m• Hari              :\e[0m$bd $hari"
+echo -e " $mg ║ \e[36;1m• Tanggal           :\e[0m$bd $tnggl"
+echo -e " $mg ║ \e[36;1m• IP VPS            :\e[0m$bd $IPVPS"
+echo -e " $mg ║ \e[36;1m• Domain            :\e[0m$bd $DOMAIN"
+echo -e  "  ╠══════════════════════════════════════════════════════════╣" | lolcat
+echo -e  "  ║                       ┃MENU OPTIONS┃                     ║" |lolcat
+echo -e  "  ╠══════════════════════════════════════════════════════════╣" | lolcat
+echo -e  " \e[32;1m ║\e[m$bd 1$bl]\e[m$bd Panel SSH & OpenVPN       $bl                            ║"
+echo -e  " $gl ║\e[m$bd 2$bl]\e[m$bd Panel Wireguard                $bl                       ║"
+echo -e  " $gl ║\e[m$bd 3$bl]\e[m$bd Panel L2tp & Pptp Account          $bl                   ║"
+echo -e  " $gl ║\e[m$bd 4$bl]\e[m$bd Panel Sstp  Account               $gl                    ║"
+echo -e  " $mg ║\e[m$bd 5$bl]\e[m$bd Panel Ssr & Ss Account         $gl                       ║"
+echo -e  " $mg ║\e[m$bd 6$bl]\e[m$bd Panel v2ray                  $gl                         ║"
+echo -e  " $bl ║\e[m$bd 7$bl]\e[m$bd Panel VLess                     $mg                      ║"
+echo -e  " $bl ║\e[m$bd 8$bl]\e[m$bd Panel TrojanGFW                  $mg                     ║"
+echo -e  " $bl ║\e[m$bd 9$bl]\e[m$bd Panel Bengkel VPS                $mg                     ║"
+echo -e   "  \e[1;32m╠══════════════════════════════════════════════════════════╣" | lolcat
+echo -e   "  ║                       ┃SYSTEM MENU┃                      ║" | lolcat 
+echo -e   "  \e[1;32m╠══════════════════════════════════════════════════════════╣" | lolcat
+echo -e   " $bl ║\e[m$bd 10$bl]\e[m$bd Add Domain Cloudflare                     $mg           ║"
+echo -e   " $mg ║\e[m$bd 11$bl]\e[m$bd Change Port All Account           $mg                   ║"
+echo -e   " $gl ║\e[m$bd 12$bl]\e[m$bd Autobackup Data VPS               $mg                   ║"
+echo -e   " $gl ║\e[m$bd 13$bl]\e[m$bd Backup Data VPS                  $bl                    ║"
+echo -e   " $gl ║\e[m$bd 14$bl]\e[m$bd Restore Data VPS                  $bl                   ║"
+echo -e   " $bl ║\e[m$bd 15$bl]\e[m$bd Webmin Menu                       $bl                   ║"
+echo -e   " $bl ║\e[m$bd 16$bl]\e[m$bd Limit Bandwith Speed Server        $gl                  ║"
+echo -e   " $bl ║\e[m$bd 17$bl]\e[m$bd Check Usage of VPS Ram         $gl                      ║" 
+echo -e   " $mg ║\e[m$bd 18$bl]\e[m$bd Reboot VPS                     $gl                      ║"
+echo -e   " $mg ║\e[m$bd 19$bl]\e[m$bd Speedtest VPS                 $mg                       ║"
+echo -e   " $mg ║\e[m$bd 20$bl]\e[m$bd Information Display System      $mg                     ║" 
+echo -e   " $gl ║\e[m$bd 21$bl]\e[m$bd Info Script Auto Install       $mg                      ║"
+echo -e   " $gl ║\e[m$bd 22$bl]\e[m$bd Clear Log                   $bl                         ║"
+echo -e   " $mg ║\e[m$bd 23$bl]\e[m$bd Auto Reboot                     $gl                     ║"
+echo -e   " $bl ║\e[m$bd 28$bl]\e[m$bd Add ID Cloudflare                    $mg                      ║"
+echo -e   " $bl ║\e[m$bd 29$bl]\e[m$bd Cloudflare Add-Ons                 $mg                           ║ "
+echo -e   " $mg ║\e[m$bd 24$bl]\e[m$bd Pointing VPS                   $mg                      ║"
+echo -e   " $mg ║\e[m$bd 25$bl]\e[m$bd Service Status                  $mg                     ║"
+echo -e   " $mg ║\e[m$bd 26$bl]\e[m$bd Cek Bandwidth VPS              $mg                      ║"
+echo -e   " $mg ║\e[m$bd 27$bl]\e[m$bd Install BBR              $mg                            ║"
+echo -e   " $mg ║\e[m$bd 28$bl]\e[m$bd Update Script Last Version        $mg                   ║"
+echo -e   "  \e[1;32m╠══════════════════════════════════════════════════════════╣" | lolcat
+echo -e   "  ║ x)   Exit                                                ║" | lolcat
+echo -e   "  \e[1;32m╚══════════════════════════════════════════════════════════╝" | lolcat
 echo -e   ""
-read -p "     Select From Options [1-32 or x] :  " menu
+read -p "     Select From Options [1-28 or x] :  " menu
+echo -e   ""
+echo -e   ""
 echo -e   ""
 case $menu in
 1)
@@ -113,84 +104,89 @@ v2raay
 vleess
 ;;
 8)
-trojanGO
+trojaan
 ;;
 9)
-trojaan
+format
 ;;
 10)
 add-host
 ;;
 11)
-certv2ray
-;;
-12)
 change-port
 ;;
-13)
+12)
 autobackup
 ;;
-14)
+13)
 backup
 ;;
-15)
+14)
 restore
 ;;
-16)
+15)
 wbmn
 ;;
-17)
+16)
 limit-speed
 ;;
-18)
+17)
 ram
 ;;
-19)
+18)
 reboot
 ;;
-20)
+19)
 speedtest
 ;;
-21)
+20)
 info
 ;;
-22)
+21)
 about
 ;;
-23)
-bbr
-;;
-24)
-auto-reboot
-;;
-25)
-running
-;;
-26)
+22)
 clear-log
 ;;
-27)
-restart
+23)
+auto-reboot
 ;;
-28)
+24)
 cff
 ;;
-29)
+25)
 cfd
 ;;
-30)
+26)
 cfh
 ;;
+27)
+pointing
+;;
+28)
+running
+;;
+29)
+bw
+;;
+30)
+bbr
+;;
 31)
-nano /etc/issue.net
+update
 ;;
 32)
-update
+systemctl restart shadowsocks-libev-server@tls && systemctl restart shadowsocks-libev-server@http
+;;
+33)
+;;
+34)
 ;;
 x)
 exit
 ;;
 *)
-echo  "Please enter an correct number"
+clear
+menu
 ;;
 esac
