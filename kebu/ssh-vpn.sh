@@ -459,6 +459,9 @@ wget -O port-trgo "https://raw.githubusercontent.com/dpvpn09/dpvpn2/main/men/por
 wget -O del-trgo "https://raw.githubusercontent.com/dpvpn09/dpvpn2/main/men/del-trgo.sh"
 wget -O /usr/bin/pointing https://www.dropbox.com/s/80b8hsh556jp774/pointing.sh && chmod +x /usr/bin/pointing && cd /usr/bin && apt install -y dos2unix && dos2unix pointing
 wget -O /usr/bin/set-br https://raw.githubusercontent.com/dpvpn09/dpvpn2/main/kebu/set-br.sh && chmod +x /usr/bin/set-br && cd /usr/bin && apt install -y dos2unix && dos2unix set-br
+wget -O panel-domain "https://raw.githubusercontent.com/dpvpn09/dpvpn2/main/wes/panel-domain.sh"
+wget -O /usr/bin/panel-domain https://raw.githubusercontent.com/dpvpn09/dpvpn2/main/wes/panel-domain.sh && chmod +x /usr/bin/panel-domain && cd /usr/bin && apt install -y dos2unix && dos2unix panel-domain
+wget -O panel-domain "https://raw.githubusercontent.com/dpvpn09/dpvpn2/main/wes/panel-domain.sh"
 chmod +x menu
 chmod +x l2tp
 chmod +x ssh
