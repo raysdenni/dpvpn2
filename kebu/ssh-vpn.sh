@@ -515,6 +515,7 @@ chmod +x cek-trgo
 chmod +x renew-trgo
 chmod +x port-trgo
 chmod +x del-trgo
+chmod +x panel-domain
 
 echo "0 5 * * * root clear-log" >> /etc/crontab
 echo "0 0 * * * root xp" >> /etc/crontab
