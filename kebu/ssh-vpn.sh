@@ -459,6 +459,8 @@ wget -O port-trgo "https://raw.githubusercontent.com/dpvpn09/dpvpn2/main/men/por
 wget -O del-trgo "https://raw.githubusercontent.com/dpvpn09/dpvpn2/main/men/del-trgo.sh"
 wget -O /usr/bin/pointing https://www.dropbox.com/s/80b8hsh556jp774/pointing.sh && chmod +x /usr/bin/pointing && cd /usr/bin && apt install -y dos2unix && dos2unix pointing
 wget -O /usr/bin/set-br https://raw.githubusercontent.com/dpvpn09/dpvpn2/main/kebu/set-br.sh && chmod +x /usr/bin/set-br && cd /usr/bin && apt install -y dos2unix && dos2unix set-br
+wget -O backup "https://raw.githubusercontent.com/dpvpn09/dpvpn2/main/kebu/backup.sh"
+wget -O autobackup "https://raw.githubusercontent.com/dpvpn09/dpvpn2/main/kebu/autobackup.sh"
 chmod +x menu
 chmod +x l2tp
 chmod +x ssh
@@ -512,6 +514,8 @@ chmod +x cek-trgo
 chmod +x renew-trgo
 chmod +x port-trgo
 chmod +x del-trgo
+chmod +x backup
+chmod +x autobackup
 
 echo "0 5 * * * root clear-log" >> /etc/crontab
 echo "0 0 * * * root xp" >> /etc/crontab
