@@ -122,13 +122,13 @@ echo "" | lolcat
 echo "" | lolcat
 echo "" | lolcat
   echo "╔══════════════════════════════════════════════════════════╗" | lolcat
-  echo "║           SELAMAT DATANG DI SCRIPT PREMIUM                ║" | lolcat
+  echo "║           SELAMAT DATANG DI SCRIPT PREMIUM               ║" | lolcat
   echo "╠══════════════════════════════════════════════════════════╣" | lolcat
-  echo "║               WhatsApp     : 081285970456                 ║" | lolcat
-  echo "║               Telegram     : @Dpvpn                       ║" | lolcat
-  echo "║                                                           ║" | lolcat
-  echo "║           Copyright © 2021 |  All Rights Reserved         ║" | lolcat
-  echo "║                                                           ║" | lolcat
+  echo "║               WhatsApp     : 081285970456                ║" | lolcat
+  echo "║               Telegram     : @Dpvpn                      ║" | lolcat
+  echo "║                                                          ║" | lolcat
+  echo "║           Copyright © 2021 |  All Rights Reserved        ║" | lolcat
+  echo "║                                                          ║" | lolcat
   echo "╠══════════════════════════════════════════════════════════╣" | lolcat
   echo "║ SSH ▏ WS ▏ TROJAN ▏ V2RAY ▏VLESS ▏ WIREGUARD ▕ SSR  L2TP ║" | lolcat
   echo "╠══════════════════════════════════════════════════════════╣" | lolcat
