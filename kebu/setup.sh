@@ -47,7 +47,7 @@ wget https://raw.githubusercontent.com/dpvpn09/dpvpn2/main/kebu/sodosok.sh && ch
 #install wireguard
 wget https://raw.githubusercontent.com/dpvpn09/dpvpn2/main/kebu/wg.sh && chmod +x wg.sh && screen -S wg ./wg.sh
 #install v2ray
-wget https://raw.githubusercontent.com/dpvpn09/dpvpn/main/ins-vt.sh && chmod +x ins-vt.sh && screen -S v2ray ./ins-vt.sh
+wget https://raw.githubusercontent.com/dpvpn09/dpvpn2/main/ins-vt.sh && chmod +x ins-vt.sh && screen -S v2ray ./ins-vt.sh
 #install L2TP
 wget https://raw.githubusercontent.com/dpvpn09/dpvpn2/main/kebu/ipsec.sh && chmod +x ipsec.sh && screen -S ipsec ./ipsec.sh
 #wget https://raw.githubusercontent.com/YakkoRasZ14/private/main/kebu/set-br.sh && chmod +x set-br.sh && ./set-br.sh
