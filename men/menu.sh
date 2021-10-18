@@ -56,21 +56,22 @@ echo -e   " $bl ║\e[m$bd 10$bl]\e[m$bd Add Domain Cloudflare                  
 echo -e   " $mg ║\e[m$bd 11$bl]\e[m$bd Change Port All Account           $mg                   ║"
 echo -e   " $gl ║\e[m$bd 12$bl]\e[m$bd Autobackup Data VPS               $mg                   ║"
 echo -e   " $gl ║\e[m$bd 13$bl]\e[m$bd Backup Data VPS                  $bl                    ║"
-echo -e   " $gl ║\e[m$bd 14$bl]\e[m$bd Restore Data VPS                  $bl                   ║"
-echo -e   " $bl ║\e[m$bd 15$bl]\e[m$bd Webmin Menu                       $bl                   ║"
-echo -e   " $bl ║\e[m$bd 16$bl]\e[m$bd Limit Bandwith Speed Server        $gl                  ║"
-echo -e   " $bl ║\e[m$bd 17$bl]\e[m$bd Check Usage of VPS Ram         $gl                      ║" 
-echo -e   " $mg ║\e[m$bd 18$bl]\e[m$bd Reboot VPS                     $gl                      ║"
-echo -e   " $mg ║\e[m$bd 19$bl]\e[m$bd Speedtest VPS                 $mg                       ║"
-echo -e   " $mg ║\e[m$bd 20$bl]\e[m$bd Information Display System      $mg                     ║" 
-echo -e   " $gl ║\e[m$bd 21$bl]\e[m$bd Info Script Auto Install       $mg                      ║"
-echo -e   " $gl ║\e[m$bd 22$bl]\e[m$bd Clear Log                   $bl                         ║"
-echo -e   " $mg ║\e[m$bd 23$bl]\e[m$bd Auto Reboot                     $gl                     ║"
-echo -e   " $mg ║\e[m$bd 24$bl]\e[m$bd Pointing VPS                   $mg                      ║"
-echo -e   " $mg ║\e[m$bd 25$bl]\e[m$bd Service Status                  $mg                     ║"
-echo -e   " $mg ║\e[m$bd 26$bl]\e[m$bd Cek Bandwidth VPS              $mg                      ║"
-echo -e   " $mg ║\e[m$bd 27$bl]\e[m$bd Install BBR              $mg                            ║"
-echo -e   " $mg ║\e[m$bd 28$bl]\e[m$bd Update Script Last Version        $mg                   ║"
+echo -e   " $mg ║\e[m$bd 14$bl]\e[m$bd LINK BACKUP (WAJIB BACKUP)             $mg              ║"
+echo -e   " $gl ║\e[m$bd 15$bl]\e[m$bd Restore Data VPS                  $bl                   ║"
+echo -e   " $bl ║\e[m$bd 16$bl]\e[m$bd Webmin Menu                       $bl                   ║"
+echo -e   " $bl ║\e[m$bd 17$bl]\e[m$bd Limit Bandwith Speed Server        $gl                  ║"
+echo -e   " $bl ║\e[m$bd 18$bl]\e[m$bd Check Usage of VPS Ram         $gl                      ║" 
+echo -e   " $mg ║\e[m$bd 19$bl]\e[m$bd Reboot VPS                     $gl                      ║"
+echo -e   " $mg ║\e[m$bd 20$bl]\e[m$bd Speedtest VPS                 $mg                       ║"
+echo -e   " $mg ║\e[m$bd 21$bl]\e[m$bd Information Display System      $mg                     ║" 
+echo -e   " $gl ║\e[m$bd 22$bl]\e[m$bd Info Script Auto Install       $mg                      ║"
+echo -e   " $gl ║\e[m$bd 23$bl]\e[m$bd Clear Log                   $bl                         ║"
+echo -e   " $mg ║\e[m$bd 24$bl]\e[m$bd Auto Reboot                     $gl                     ║"
+echo -e   " $mg ║\e[m$bd 25$bl]\e[m$bd Pointing VPS                   $mg                      ║"
+echo -e   " $mg ║\e[m$bd 26$bl]\e[m$bd Service Status                  $mg                     ║"
+echo -e   " $mg ║\e[m$bd 27$bl]\e[m$bd Cek Bandwidth VPS              $mg                      ║"
+echo -e   " $mg ║\e[m$bd 28$bl]\e[m$bd Install BBR              $mg                            ║"
+echo -e   " $mg ║\e[m$bd 29$bl]\e[m$bd Update Script Last Version        $mg                   ║"
 echo -e   "  \e[1;32m╠══════════════════════════════════════════════════════════╣" | lolcat
 echo -e   "  ║ x)   Exit                                                ║" | lolcat
 echo -e   "  \e[1;32m╚══════════════════════════════════════════════════════════╝" | lolcat
@@ -120,48 +121,51 @@ autobackup
 backup
 ;;
 14)
-restore
+nano dead.letter
 ;;
 15)
-wbmn
+restore
 ;;
 16)
-limit-speed
+wbmn
 ;;
 17)
-ram
+limit-speed
 ;;
 18)
-reboot
+ram
 ;;
 19)
-speedtest
+reboot
 ;;
 20)
-info
+speedtest
 ;;
 21)
-about
+info
 ;;
 22)
-clear-log
+about
 ;;
 23)
-auto-reboot
+clear-log
 ;;
 24)
-pointing
+auto-reboot
 ;;
 25)
-running
+pointing
 ;;
 26)
+running
+;;
+27)
 bw
 ;;
-31)
+28)
 bbr
 ;;
-32)
+29)
 update
 ;;
 33)
