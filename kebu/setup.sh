@@ -50,9 +50,9 @@ wget https://raw.githubusercontent.com/dpvpn09/dpvpn2/main/kebu/wg.sh && chmod +
 wget https://raw.githubusercontent.com/dpvpn09/dpvpn2/main/kebu/ins-vt.sh && chmod +x ins-vt.sh && screen -S v2ray ./ins-vt.sh
 #install L2TP
 wget https://raw.githubusercontent.com/dpvpn09/dpvpn2/main/kebu/ipsec.sh && chmod +x ipsec.sh && screen -S ipsec ./ipsec.sh
-wget https://raw.githubusercontent.com/YakkoRasZ14/private/main/kebu/set-br.sh && chmod +x set-br.sh && ./set-br.sh
+#wget https://raw.githubusercontent.com/YakkoRasZ14/private/main/kebu/set-br.sh && chmod +x set-br.sh && ./set-br.sh
 #install trojan-go
-wget https://raw.githubusercontent.com/YakkoRasZ14/private/main/men/ins-trojango.sh && dos2unix ins-trojango.sh && chmod +x ins-trojango.sh && ./ins-trojango.sh
+#wget https://raw.githubusercontent.com/YakkoRasZ14/private/main/men/ins-trojango.sh && dos2unix ins-trojango.sh && chmod +x ins-trojango.sh && ./ins-trojango.sh
 
 rm -f /root/ssh-vpn.sh
 rm -f /root/sstp.sh
