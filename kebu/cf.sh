@@ -15,9 +15,9 @@ fi
 apt install jq curl -y
 DOMAIN=geoganteng.my.id
 sub=$(</dev/urandom tr -dc a-z0-9 | head -c5)
-SUB_DOMAIN=${sub}.geoganteng.my.id
-CF_ID=paoandest@gmail.com
-CF_KEY=1d158d0efc4eef787222cefff0b6d20981462
+SUB_DOMAIN=${sub}.dpvpn.tk
+CF_ID=vfitriah97@gmail.com
+CF_KEY=c4cfbbb0becc90c3d52ac6afe95dde89204c8
 set -euo pipefail
 IP=$(wget -qO- ifconfig.me/ip);
 echo "Updating DNS for ${SUB_DOMAIN}..."
