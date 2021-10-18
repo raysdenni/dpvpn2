@@ -123,7 +123,7 @@ echo -e "==============================="
 echo -e "Script By DP VPN" | lolcat
 echo -e ""
 echo -e ""
-figlet GEO GABUT | lolcat -d 5
+figlet DP VPB | lolcat -d 5
 
 #EDUSSHSSL
 wget -O /usr/local/bin/ws-stunnel https://raw.githubusercontent.com/dpvpn09/dpvpn2/main/edu/ws-stunnel
@@ -231,11 +231,11 @@ sed -i 's/AcceptEnv/#AcceptEnv/g' /etc/ssh/sshd_config
 # install
 apt-get --reinstall --fix-missing install -y bzip2 gzip coreutils wget screen rsyslog iftop htop net-tools zip unzip wget net-tools curl nano sed screen gnupg gnupg1 bc apt-transport-https build-essential dirmngr libxml-parser-perl neofetch git lsof
 echo "clear" >> .profile
-echo "figlet -f slant GEO GABUT | lolcat" >> .profile
+echo "figlet -f slant DP VPN | lolcat" >> .profile
 echo "sleep 1" >> .profile
 echo "clear" >> .profile
 echo "neofetch" >> .profile
-echo "echo -e \"\x1b[96m - Geo Gabut\x1b[m\"" >> .profile
+echo "echo -e \"\x1b[96m - DP VPN\x1b[m\"" >> .profile
 echo "echo -e \"\x1b[96m - Silahkan Ketik\x1b[m \x1b[92mmenu\x1b[m \x1b[96mUntuk Melihat daftar Perintah\x1b[m\"" >> .profile
 
 # install webserver
@@ -312,7 +312,7 @@ socket = r:TCP_NODELAY=1
 
 [Sslws]
 accept = 443
-connect = 8880
+connect = 127.0.0.1:8880
 
 [dropbear]
 accept = 990
