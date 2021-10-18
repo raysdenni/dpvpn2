@@ -108,7 +108,7 @@ trojaan
 format
 ;;
 10)
-add-host
+key
 ;;
 11)
 change-port
