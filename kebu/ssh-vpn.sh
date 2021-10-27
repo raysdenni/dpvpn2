@@ -312,14 +312,14 @@ socket = r:TCP_NODELAY=1
 
 [Sslws]
 accept = 443
-connect = 127.0.0.1:8880
+connect = 137.0.0.1:8880
 
 [dropbear]
 accept = 990
 connect = 127.0.0.1:109
 
 [dropbear]
-accept = 445
+accept = 443
 connect = 127.0.0.1:22
 
 [openvpn]
