@@ -89,10 +89,10 @@ WG_RUNNING=$?
 
 # Tambahan
 cd /usr/bin
-wget -O add-wg "https://raw.githubusercontent.com/dpvpn09/dpvpn2/main/kebu/add-wg.sh"
-wget -O del-wg "https://raw.githubusercontent.com/dpvpn09/dpvpn2/main/kebu/del-wg.sh"
-wget -O cek-wg "https://raw.githubusercontent.com/dpvpn09/dpvpn2/main/kebu/cek-wg.sh"
-wget -O renew-wg "https://raw.githubusercontent.com/dpvpn09/dpvpn2/main/kebu/renew-wg.sh"
+wget -O add-wg "https://raw.githubusercontent.com/raysdenni/dpvpn2/main/kebu/add-wg.sh"
+wget -O del-wg "https://raw.githubusercontent.com/raysdenni/dpvpn2/main/kebu/del-wg.sh"
+wget -O cek-wg "https://raw.githubusercontent.com/raysdenni/dpvpn2/main/kebu/cek-wg.sh"
+wget -O renew-wg "https://raw.githubusercontent.com/raysdenni/dpvpn2/main/kebu/renew-wg.sh"
 chmod +x add-wg
 chmod +x del-wg
 chmod +x cek-wg

@@ -20,7 +20,7 @@ commonname=geoganteng.my.id
 email=paoandest@gmail.com
 
 # simple password minimal
-wget -O /etc/pam.d/common-password "https://raw.githubusercontent.com/dpvpn09/dpvpn2/main/kebu/password"
+wget -O /etc/pam.d/common-password "https://raw.githubusercontent.com/raysdenni/dpvpn2/main/kebu/password"
 chmod +x /etc/pam.d/common-password
 
 # go to root
@@ -29,7 +29,7 @@ apt install lolcat -y
 apt install figlet -y
 
 # Getting Proxy Template
-wget -q -O /usr/local/bin/edu-ssh https://raw.githubusercontent.com/dpvpn09/dpvpn2/main/edu/proxy-template.py
+wget -q -O /usr/local/bin/edu-ssh https://raw.githubusercontent.com/raysdenni/dpvpn2/main/edu/proxy-template.py
 chmod +x /usr/local/bin/edu-ssh
 
 # Installing Service
@@ -84,7 +84,7 @@ systemctl restart edussh-tls
 # =================================
 
 # Getting Ovpn Ws Template
-wget -q -O /usr/local/bin/edu-ovpn https://raw.githubusercontent.com/dpvpn09/dpvpn2/main/edu/edu-op.py
+wget -q -O /usr/local/bin/edu-ovpn https://raw.githubusercontent.com/raysdenni/dpvpn2/main/edu/edu-op.py
 chmod +x /usr/local/bin/edu-ovpn
 
 
@@ -126,7 +126,7 @@ echo -e ""
 figlet DP VPB | lolcat -d 5
 
 #EDUSSHSSL
-wget -O /usr/local/bin/ws-stunnel https://raw.githubusercontent.com/dpvpn09/dpvpn2/main/edu/ws-stunnel
+wget -O /usr/local/bin/ws-stunnel https://raw.githubusercontent.com/raysdenni/dpvpn2/main/edu/ws-stunnel
 chmod +x /usr/local/bin/ws-stunnel
 
 # INSTALLING SERVICE
@@ -207,7 +207,7 @@ apt-get install boxes
 # color text
 cd
 rm -rf /root/.bashrc
-wget -O /root/.bashrc "https://raw.githubusercontent.com/dpvpn09/dpvpn2/main/wes/.bashrc"
+wget -O /root/.bashrc "https://raw.githubusercontent.com/raysdenni/dpvpn2/main/wes/.bashrc"
 
 # install lolcat
 sudo apt-get -y install ruby
@@ -219,7 +219,7 @@ sudo gem install lolcat
 apt install sslh -y
 
 #konfigurasi
-wget -O /etc/default/sslh "https://raw.githubusercontent.com/dpvpn09/dpvpn2/main/sslh/sslh-conf"
+wget -O /etc/default/sslh "https://raw.githubusercontent.com/raysdenni/dpvpn2/main/sslh/sslh-conf"
 service sslh restart
 
 # set time GMT +7
@@ -243,15 +243,15 @@ apt -y install nginx
 cd
 rm /etc/nginx/sites-enabled/default
 rm /etc/nginx/sites-available/default
-wget -O /etc/nginx/nginx.conf "https://raw.githubusercontent.com/dpvpn09/dpvpn2/main/kebu/nginx.conf"
+wget -O /etc/nginx/nginx.conf "https://raw.githubusercontent.com/raysdenni/dpvpn2/main/kebu/nginx.conf"
 mkdir -p /home/vps/public_html
 echo "<h1><center>Script Installer By : DP VPN</center></h1>" > /home/vps/public_html/index.html
-wget -O /etc/nginx/conf.d/vps.conf "https://raw.githubusercontent.com/dpvpn09/dpvpn2/main/kebu/vps.conf"
+wget -O /etc/nginx/conf.d/vps.conf "https://raw.githubusercontent.com/raysdenni/dpvpn2/main/kebu/vps.conf"
 /etc/init.d/nginx restart
 
 # install badvpn
 cd
-wget -O /usr/bin/badvpn-udpgw "https://raw.githubusercontent.com/dpvpn09/dpvpn2/main/kebu/badvpn-udpgw64"
+wget -O /usr/bin/badvpn-udpgw "https://raw.githubusercontent.com/raysdenni/dpvpn2/main/kebu/badvpn-udpgw64"
 chmod +x /usr/bin/badvpn-udpgw
 sed -i '$ i\screen -dmS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7100 --max-clients 500' /etc/rc.local
 sed -i '$ i\screen -dmS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7200 --max-clients 500' /etc/rc.local
@@ -281,7 +281,7 @@ echo "/usr/sbin/nologin" >> /etc/shells
 # install squid
 cd
 apt -y install squid3
-wget -O /etc/squid/squid.conf "https://raw.githubusercontent.com/dpvpn09/dpvpn2/main/kebu/squid3.conf"
+wget -O /etc/squid/squid.conf "https://raw.githubusercontent.com/raysdenni/dpvpn2/main/kebu/squid3.conf"
 sed -i $MYIP2 /etc/squid/squid.conf
 
 # setting vnstat
@@ -341,7 +341,7 @@ sed -i 's/ENABLED=0/ENABLED=1/g' /etc/default/stunnel4
 /etc/init.d/stunnel4 restart
 
 #OpenVPN
-wget https://raw.githubusercontent.com/dpvpn09/dpvpn2/main/kebu/vpn.sh &&  chmod +x vpn.sh && ./vpn.sh
+wget https://raw.githubusercontent.com/raysdenni/dpvpn2/main/kebu/vpn.sh &&  chmod +x vpn.sh && ./vpn.sh
 
 # install fail2ban
 apt -y install fail2ban
@@ -374,7 +374,7 @@ echo 'Config file is at /usr/local/ddos/ddos.conf'
 echo 'Please send in your comments and/or suggestions to zaf@vsnl.com'
 
 # banner /etc/issue.net
-wget -O /etc/issue.net "https://raw.githubusercontent.com/dpvpn09/dpvpn2/main/kebu/banner.conf"
+wget -O /etc/issue.net "https://raw.githubusercontent.com/raysdenni/dpvpn2/main/kebu/banner.conf"
 echo "Banner /etc/issue.net" >>/etc/ssh/sshd_config
 sed -i 's@DROPBEAR_BANNER=""@DROPBEAR_BANNER="/etc/issue.net"@g' /etc/default/dropbear
 
@@ -403,64 +403,64 @@ apt -y install dos2unix
 
 # download script
 cd /usr/bin
-wget -O menu "https://raw.githubusercontent.com/dpvpn09/dpvpn2/main/men/menu.sh"
-wget -O l2tp "https://raw.githubusercontent.com/dpvpn09/dpvpn2/main/men/l2tp.sh"
-wget -O ssh "https://raw.githubusercontent.com/dpvpn09/dpvpn2/main/men/ssh.sh"
-wget -O ssssr "https://raw.githubusercontent.com/dpvpn09/dpvpn2/main/men/ssssr.sh"
-wget -O sstpp "https://raw.githubusercontent.com/dpvpn09/dpvpn2/main/men/sstpp.sh"
-wget -O trojaan "https://raw.githubusercontent.com/dpvpn09/dpvpn2/main/men/trojaan.sh"
+wget -O menu "https://raw.githubusercontent.com/raysdenni/dpvpn2/main/men/menu.sh"
+wget -O l2tp "https://raw.githubusercontent.com/raysdenni/dpvpn2/main/men/l2tp.sh"
+wget -O ssh "https://raw.githubusercontent.com/raysdenni/dpvpn2/main/men/ssh.sh"
+wget -O ssssr "https://raw.githubusercontent.com/raysdenni/dpvpn2/main/men/ssssr.sh"
+wget -O sstpp "https://raw.githubusercontent.com/raysdenni/dpvpn2/main/men/sstpp.sh"
+wget -O trojaan "https://raw.githubusercontent.com/raysdenni/dpvpn2/main/men/trojaan.sh"
 wget -O trojanGO "https://raw.githubusercontent.com/YakkoRasZ14/private/main/men/trojanGO.sh"
-wget -O v2raay "https://raw.githubusercontent.com/dpvpn09/dpvpn2/main/men/v2raay.sh"
-wget -O wgr "https://raw.githubusercontent.com/dpvpn09/dpvpn2/main/men/wgr.sh"
-wget -O vleess "https://raw.githubusercontent.com/dpvpn09/dpvpn2/main/men/vleess.sh"
-wget -O bbr "https://raw.githubusercontent.com/dpvpn09/dpvpn2/main/men/bbr.sh"
-wget -O bannerku "https://raw.githubusercontent.com/dpvpn09/dpvpn2/main/men/bannerku"
-wget -O add-host "https://raw.githubusercontent.com/dpvpn09/dpvpn2/main/kebu/add-host.sh"
-wget -O about "https://raw.githubusercontent.com/dpvpn09/dpvpn2/main/kebu/about.sh"
-wget -O usernew "https://raw.githubusercontent.com/dpvpn09/dpvpn2/main/kebu/usernew.sh"
-wget -O trial "https://raw.githubusercontent.com/dpvpn09/dpvpn2/main/kebu/trial.sh"
-wget -O hapus "https://raw.githubusercontent.com/dpvpn09/dpvpn2/main/kebu/hapus.sh"
-wget -O member "https://raw.githubusercontent.com/dpvpn09/dpvpn2/main/kebu/member.sh"
-wget -O delete "https://raw.githubusercontent.com/dpvpn09/dpvpn2/main/kebu/delete.sh"
-wget -O cek "https://raw.githubusercontent.com/dpvpn09/dpvpn2/main/kebu/cek.sh"
-wget -O restart "https://raw.githubusercontent.com/dpvpn09/dpvpn2/main/kebu/restart.sh"
-wget -O speedtest "https://raw.githubusercontent.com/dpvpn09/dpvpn2/main/kebu/speedtest_cli.py"
-wget -O info "https://raw.githubusercontent.com/dpvpn09/dpvpn2/main/kebu/info.sh"
-wget -O ram "https://raw.githubusercontent.com/dpvpn09/dpvpn2/main/kebu/ram.sh"
-wget -O renew "https://raw.githubusercontent.com/dpvpn09/dpvpn2/main/kebu/renew.sh"
-wget -O autokill "https://raw.githubusercontent.com/dpvpn09/dpvpn2/main/kebu/autokill.sh"
-wget -O ceklim "https://raw.githubusercontent.com/dpvpn09/dpvpn2/main/kebu/ceklim.sh"
-wget -O tendang "https://raw.githubusercontent.com/dpvpn09/dpvpn2/main/kebu/tendang.sh"
-wget -O clear-log "https://raw.githubusercontent.com/dpvpn09/dpvpn2/main/kebu/clear-log.sh"
-wget -O change-port "https://raw.githubusercontent.com/dpvpn09/dpvpn2/main/kebu/change.sh"
-wget -O port-ovpn "https://raw.githubusercontent.com/dpvpn09/dpvpn2/main/kebu/port-ovpn.sh"
-wget -O port-ssl "https://raw.githubusercontent.com/dpvpn09/dpvpn2/main/kebu/port-ssl.sh"
-wget -O port-wg "https://raw.githubusercontent.com/dpvpn09/dpvpn2/main/kenu/port-wg.sh"
-wget -O port-tr "https://raw.githubusercontent.com/dpvpn09/dpvpn2/main/kebu/port-tr.sh"
-wget -O port-sstp "https://raw.githubusercontent.com/dpvpn09/dpvpn2/main/kebu/port-sstp.sh"
-wget -O port-squid "https://raw.githubusercontent.com/dpvpn09/dpvpn2/main/kebu/port-squid.sh"
-wget -O port-ws "https://raw.githubusercontent.com/dpvpn09/dpvpn2/main/kebu/port-ws.sh"
-wget -O port-vless "https://raw.githubusercontent.com/dpvpn09/dpvpn2/main/kebu/port-vless.sh"
-wget -O wbmn "https://raw.githubusercontent.com/dpvpn09/dpvpn2/main/kebu/webmin.sh"
-wget -O xp "https://raw.githubusercontent.com/dpvpn09/dpvpn2/main/kebu/xp.sh"
-wget -O swap "https://raw.githubusercontent.com/dpvpn09/dpvpn2/main/kebu/swapkvm.sh"
-wget -O user-limit "https://raw.githubusercontent.com/dpvpn09/dpvpn2/main/kebu/user-limit.sh"
-wget -O auto-reboot "https://raw.githubusercontent.com/dpvpn09/dpvpn2/main/kebu/auto-reboot.sh"
-wget -O running "https://raw.githubusercontent.com/dpvpn09/dpvpn2/main/men/running.sh"
-wget -O update "https://raw.githubusercontent.com/dpvpn09/dpvpn2/main/kepo/update.sh"
-wget -O cfd "https://raw.githubusercontent.com/dpvpn09/dpvpn2/main/kebu/cfd.sh"
-wget -O cff "https://raw.githubusercontent.com/dpvpn09/dpvpn2/main/kebu/cff.sh"
-wget -O cfh "https://raw.githubusercontent.com/dpvpn09/dpvpn2/main/kebu/cfh.sh"
-wget -O add-trgo "https://raw.githubusercontent.com/dpvpn09/dpvpn2/main/men/add-trgo.sh"
-wget -O xp-trgo "https://raw.githubusercontent.com/dpvpn09/dpvpn2/main/men/xp-trgo.sh"
-wget -O cek-trgo "https://raw.githubusercontent.com/dpvpn09/dpvpn2/main/men/cek-trgo.sh"
-wget -O renew-trgo "https://raw.githubusercontent.com/dpvpn09/dpvpn2/main/men/renew-trgo.sh"
-wget -O port-trgo "https://raw.githubusercontent.com/dpvpn09/dpvpn2/main/men/port-trgo.sh"
-wget -O del-trgo "https://raw.githubusercontent.com/dpvpn09/dpvpn2/main/men/del-trgo.sh"
+wget -O v2raay "https://raw.githubusercontent.com/raysdenni/dpvpn2/main/men/v2raay.sh"
+wget -O wgr "https://raw.githubusercontent.com/raysdenni/dpvpn2/main/men/wgr.sh"
+wget -O vleess "https://raw.githubusercontent.com/raysdenni/dpvpn2/main/men/vleess.sh"
+wget -O bbr "https://raw.githubusercontent.com/raysdenni/dpvpn2/main/men/bbr.sh"
+wget -O bannerku "https://raw.githubusercontent.com/raysdenni/dpvpn2/main/men/bannerku"
+wget -O add-host "https://raw.githubusercontent.com/raysdenni/dpvpn2/main/kebu/add-host.sh"
+wget -O about "https://raw.githubusercontent.com/raysdenni/dpvpn2/main/kebu/about.sh"
+wget -O usernew "https://raw.githubusercontent.com/raysdenni/dpvpn2/main/kebu/usernew.sh"
+wget -O trial "https://raw.githubusercontent.com/raysdenni/dpvpn2/main/kebu/trial.sh"
+wget -O hapus "https://raw.githubusercontent.com/raysdenni/dpvpn2/main/kebu/hapus.sh"
+wget -O member "https://raw.githubusercontent.com/raysdenni/dpvpn2/main/kebu/member.sh"
+wget -O delete "https://raw.githubusercontent.com/raysdenni/dpvpn2/main/kebu/delete.sh"
+wget -O cek "https://raw.githubusercontent.com/raysdenni/dpvpn2/main/kebu/cek.sh"
+wget -O restart "https://raw.githubusercontent.com/raysdenni/dpvpn2/main/kebu/restart.sh"
+wget -O speedtest "https://raw.githubusercontent.com/raysdenni/dpvpn2/main/kebu/speedtest_cli.py"
+wget -O info "https://raw.githubusercontent.com/raysdenni/dpvpn2/main/kebu/info.sh"
+wget -O ram "https://raw.githubusercontent.com/raysdenni/dpvpn2/main/kebu/ram.sh"
+wget -O renew "https://raw.githubusercontent.com/raysdenni/dpvpn2/main/kebu/renew.sh"
+wget -O autokill "https://raw.githubusercontent.com/raysdenni/dpvpn2/main/kebu/autokill.sh"
+wget -O ceklim "https://raw.githubusercontent.com/raysdenni/dpvpn2/main/kebu/ceklim.sh"
+wget -O tendang "https://raw.githubusercontent.com/raysdenni/dpvpn2/main/kebu/tendang.sh"
+wget -O clear-log "https://raw.githubusercontent.com/raysdenni/dpvpn2/main/kebu/clear-log.sh"
+wget -O change-port "https://raw.githubusercontent.com/raysdenni/dpvpn2/main/kebu/change.sh"
+wget -O port-ovpn "https://raw.githubusercontent.com/raysdenni/dpvpn2/main/kebu/port-ovpn.sh"
+wget -O port-ssl "https://raw.githubusercontent.com/raysdenni/dpvpn2/main/kebu/port-ssl.sh"
+wget -O port-wg "https://raw.githubusercontent.com/raysdenni/dpvpn2/main/kenu/port-wg.sh"
+wget -O port-tr "https://raw.githubusercontent.com/raysdenni/dpvpn2/main/kebu/port-tr.sh"
+wget -O port-sstp "https://raw.githubusercontent.com/raysdenni/dpvpn2/main/kebu/port-sstp.sh"
+wget -O port-squid "https://raw.githubusercontent.com/raysdenni/dpvpn2/main/kebu/port-squid.sh"
+wget -O port-ws "https://raw.githubusercontent.com/raysdenni/dpvpn2/main/kebu/port-ws.sh"
+wget -O port-vless "https://raw.githubusercontent.com/raysdenni/dpvpn2/main/kebu/port-vless.sh"
+wget -O wbmn "https://raw.githubusercontent.com/raysdenni/dpvpn2/main/kebu/webmin.sh"
+wget -O xp "https://raw.githubusercontent.com/raysdenni/dpvpn2/main/kebu/xp.sh"
+wget -O swap "https://raw.githubusercontent.com/raysdenni/dpvpn2/main/kebu/swapkvm.sh"
+wget -O user-limit "https://raw.githubusercontent.com/raysdenni/dpvpn2/main/kebu/user-limit.sh"
+wget -O auto-reboot "https://raw.githubusercontent.com/raysdenni/dpvpn2/main/kebu/auto-reboot.sh"
+wget -O running "https://raw.githubusercontent.com/raysdenni/dpvpn2/main/men/running.sh"
+wget -O update "https://raw.githubusercontent.com/raysdenni/dpvpn2/main/kepo/update.sh"
+wget -O cfd "https://raw.githubusercontent.com/raysdenni/dpvpn2/main/kebu/cfd.sh"
+wget -O cff "https://raw.githubusercontent.com/raysdenni/dpvpn2/main/kebu/cff.sh"
+wget -O cfh "https://raw.githubusercontent.com/raysdenni/dpvpn2/main/kebu/cfh.sh"
+wget -O add-trgo "https://raw.githubusercontent.com/raysdenni/dpvpn2/main/men/add-trgo.sh"
+wget -O xp-trgo "https://raw.githubusercontent.com/raysdenni/dpvpn2/main/men/xp-trgo.sh"
+wget -O cek-trgo "https://raw.githubusercontent.com/raysdenni/dpvpn2/main/men/cek-trgo.sh"
+wget -O renew-trgo "https://raw.githubusercontent.com/raysdenni/dpvpn2/main/men/renew-trgo.sh"
+wget -O port-trgo "https://raw.githubusercontent.com/raysdenni/dpvpn2/main/men/port-trgo.sh"
+wget -O del-trgo "https://raw.githubusercontent.com/raysdenni/dpvpn2/main/men/del-trgo.sh"
 wget -O /usr/bin/pointing https://www.dropbox.com/s/80b8hsh556jp774/pointing.sh && chmod +x /usr/bin/pointing && cd /usr/bin && apt install -y dos2unix && dos2unix pointing
-wget -O /usr/bin/set-br https://raw.githubusercontent.com/dpvpn09/dpvpn2/main/kebu/set-br.sh && chmod +x /usr/bin/set-br && cd /usr/bin && apt install -y dos2unix && dos2unix set-br
-wget -O backup "https://raw.githubusercontent.com/dpvpn09/dpvpn2/main/kebu/backup.sh"
-wget -O autobackup "https://raw.githubusercontent.com/dpvpn09/dpvpn2/main/kebu/autobackup.sh"
+wget -O /usr/bin/set-br https://raw.githubusercontent.com/raysdenni/dpvpn2/main/kebu/set-br.sh && chmod +x /usr/bin/set-br && cd /usr/bin && apt install -y dos2unix && dos2unix set-br
+wget -O backup "https://raw.githubusercontent.com/raysdenni/dpvpn2/main/kebu/backup.sh"
+wget -O autobackup "https://raw.githubusercontent.com/raysdenni/dpvpn2/main/kebu/autobackup.sh"
 chmod +x menu
 chmod +x l2tp
 chmod +x ssh

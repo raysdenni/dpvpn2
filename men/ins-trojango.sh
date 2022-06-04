@@ -5,7 +5,7 @@ red='\e[1;31m'
 green='\e[0;32m'
 NC='\e[0m'
 MYIP=$(wget -qO- ifconfig.me/ip);
-IZIN=$( curl https://raw.githubusercontent.com/dpvpn09/ipvps/main/ipvps | grep $MYIP )
+IZIN=$( curl https://raw.githubusercontent.com/raysdenni/dpvpn2/main/ipvps | grep $MYIP )
 if [ $MYIP = $IZIN ]; then
 echo -e "${green}Permission Accepted...${NC}"
 else
@@ -34,9 +34,9 @@ touch /etc/trojan-go/uuid.txt
 mkdir -p /etc/trojan-go/
 chmod 777 /etc/trojan-go/
 touch /etc/trojan-go/trojan-go.pid
-wget -O /etc/trojan-go/trojan-go https://raw.githubusercontent.com/dpvpn09/dpvpn2/main/men/trojan-go
-wget -O /etc/trojan-go/geoip.dat https://raw.githubusercontent.com/dpvpn09/dpvpn2/main/men/geoip.dat
-wget -O /etc/trojan-go/geosite.dat https://raw.githubusercontent.com/dpvpn09/dpvpn2/main/men/geosite.dat
+wget -O /etc/trojan-go/trojan-go https://raw.githubusercontent.com/raysdenni/dpvpn2/main/men/trojan-go
+wget -O /etc/trojan-go/geoip.dat https://raw.githubusercontent.com/raysdenni/dpvpn2/main/men/geoip.dat
+wget -O /etc/trojan-go/geosite.dat https://raw.githubusercontent.com/raysdenni/dpvpn2/main/men/geosite.dat
 chmod +x /etc/trojan-go/trojan-go
 cat <<EOF > /etc/trojan-go/config.json
 {

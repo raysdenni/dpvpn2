@@ -6,7 +6,7 @@ bd='\e[1m'
 bl='\e[36;1m'
 MYIP=$(wget -qO- ifconfig.co);
 echo "Checking VPS"
-IZIN=$( curl https://raw.githubusercontent.com/dpvpn09/ipvps/main/ipvps | grep $MYIP )
+IZIN=$( curl https://raw.githubusercontent.com/raysdenni/dpvpn2/main/ipvps | grep $MYIP )
 if [ $MYIP = $IZIN ]; then
 echo -e "${green}Permission Accepted...${NC}"
 else

@@ -6,7 +6,7 @@ NC='\e[0m'
 MYIP=$(wget -qO- icanhazip.com);
 echo -e  "${RED}Checking VPS${NC}"
 sleep 2
-IZIN=$( curl https://raw.githubusercontent.com/dpvpn09/ipvps/main/ipvps | grep $MYIP )
+IZIN=$( curl https://raw.githubusercontent.com/raysdenni/dpvpn2/main/ipvps | grep $MYIP )
 if [ $MYIP = $IZIN ]; then
 echo -e "${GREEN}Permission Accepted...${NC}"
 sleep 2 
@@ -37,19 +37,19 @@ apt install -y bzip2 gzip coreutils screen curl
 
 mkdir /var/lib/premium-script;
 echo "IP=" >> /var/lib/premium-script/ipvps.conf
-wget https://raw.githubusercontent.com/dpvpn09/dpvpn2/main/kebu/cf.sh && chmod +x cf.sh && ./cf.sh
+wget https://raw.githubusercontent.com/raysdenni/dpvpn2/main/kebu/cf.sh && chmod +x cf.sh && ./cf.sh
 #install ssh ovpn
-wget https://raw.githubusercontent.com/dpvpn09/dpvpn2/main/kebu/ssh-vpn.sh && chmod +x ssh-vpn.sh && screen -S ssh-vpn ./ssh-vpn.sh
-wget https://raw.githubusercontent.com/dpvpn09/dpvpn2/main/kebu/sstp.sh && chmod +x sstp.sh && screen -S sstp ./sstp.sh
+wget https://raw.githubusercontent.com/raysdenni/dpvpn2/main/kebu/ssh-vpn.sh && chmod +x ssh-vpn.sh && screen -S ssh-vpn ./ssh-vpn.sh
+wget https://raw.githubusercontent.com/raysdenni/dpvpn2/main/kebu/sstp.sh && chmod +x sstp.sh && screen -S sstp ./sstp.sh
 #install ssr
-wget https://raw.githubusercontent.com/dpvpn09/dpvpn2/main/kebu/ssr.sh && chmod +x ssr.sh && screen -S ssr ./ssr.sh
-wget https://raw.githubusercontent.com/dpvpn09/dpvpn2/main/kebu/sodosok.sh && chmod +x sodosok.sh && screen -S ss ./sodosok.sh
+wget https://raw.githubusercontent.com/raysdenni/dpvpn2/main/kebu/ssr.sh && chmod +x ssr.sh && screen -S ssr ./ssr.sh
+wget https://raw.githubusercontent.com/raysdenni/dpvpn2/main/kebu/sodosok.sh && chmod +x sodosok.sh && screen -S ss ./sodosok.sh
 #install wireguard
-wget https://raw.githubusercontent.com/dpvpn09/dpvpn2/main/kebu/wg.sh && chmod +x wg.sh && screen -S wg ./wg.sh
+wget https://raw.githubusercontent.com/raysdenni/dpvpn2/main/kebu/wg.sh && chmod +x wg.sh && screen -S wg ./wg.sh
 #install v2ray
-wget https://raw.githubusercontent.com/dpvpn09/dpvpn2/main/ins-vt.sh && chmod +x ins-vt.sh && screen -S v2ray ./ins-vt.sh
+wget https://raw.githubusercontent.com/raysdenni/dpvpn2/main/ins-vt.sh && chmod +x ins-vt.sh && screen -S v2ray ./ins-vt.sh
 #install L2TP
-wget https://raw.githubusercontent.com/dpvpn09/dpvpn2/main/kebu/ipsec.sh && chmod +x ipsec.sh && screen -S ipsec ./ipsec.sh
+wget https://raw.githubusercontent.com/raysdenni/dpvpn2/main/kebu/ipsec.sh && chmod +x ipsec.sh && screen -S ipsec ./ipsec.sh
 #wget https://raw.githubusercontent.com/YakkoRasZ14/private/main/kebu/set-br.sh && chmod +x set-br.sh && ./set-br.sh
 #install trojan-go
 #wget https://raw.githubusercontent.com/YakkoRasZ14/private/main/men/ins-trojango.sh && dos2unix ins-trojango.sh && chmod +x ins-trojango.sh && ./ins-trojango.sh

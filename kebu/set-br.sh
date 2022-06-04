@@ -26,12 +26,12 @@ logfile ~/.msmtp.log
 EOF
 chown -R www-data:www-data /etc/msmtprc
 cd /usr/bin
-wget -O autobackup "https://raw.githubusercontent.com/dpvpn09/dpvpn2/main/kebu/autobackup.sh"
-wget -O backup "https://raw.githubusercontent.com/dpvpn09/dpvpn2/main/kebu/backup.sh"
-wget -O bckp "https://raw.githubusercontent.com/dpvpn09/dpvpn2/main/kebu/bckp.sh"
-wget -O restore "https://raw.githubusercontent.com/dpvpn09/dpvpn2/main/kebu/restore.sh"
-wget -O strt "https://raw.githubusercontent.com/dpvpn09/dpvpn2/main/kebu/strt.sh"
-wget -O limit-speed "https://raw.githubusercontent.com/dpvpn09/dpvpn2/main/kebu/limit-speed.sh"
+wget -O autobackup "https://raw.githubusercontent.com/raysdenni/dpvpn2/main/kebu/autobackup.sh"
+wget -O backup "https://raw.githubusercontent.com/raysdenni/dpvpn2/main/kebu/backup.sh"
+wget -O bckp "https://raw.githubusercontent.com/raysdenni/dpvpn2/main/kebu/bckp.sh"
+wget -O restore "https://raw.githubusercontent.com/raysdenni/dpvpn2/main/kebu/restore.sh"
+wget -O strt "https://raw.githubusercontent.com/raysdenni/dpvpn2/main/kebu/strt.sh"
+wget -O limit-speed "https://raw.githubusercontent.com/raysdenni/dpvpn2/main/kebu/limit-speed.sh"
 chmod +x autobackup
 chmod +x backup
 chmod +x bckp
